@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCU Coders Community Pages</title>
+  <style>
+    body {
+      /* background: rgb(0, 0, 0); */
+      padding: 0;
+      margin: 0;
+    }
+
+    iframe {
+      border-width: 0px;
+      border-radius: 5px;
+      width: 100%;
+      height: 300px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+       'auto auto auto';
+      height: auto;
+      /* height: 300px; */
+      /* height: calc(100vh - 20px); */
+      grid-gap: 20px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      border: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div id="frames" class="grid-container"></div>
+
+    <script src="sketch.js"></script>
+  </main>
+</body>
+
+</html>
