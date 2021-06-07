@@ -2,21 +2,25 @@
 // Creative Coding Utrecht
 // Gender representation of the data in color and background erase
 
-let api = 'http://192.168.1.107:8080/questions_answers/'
+// let api = 'http://192.168.1.107:8080/questions_answers/';
+let api = 'http://localhost:8080/questions_answers/';
 let load = [ 'Gender', 'Residence', 'Tools', 'Discipline'];
 
 let data = {};
 
-load.forEach((l) => {
-	fetch(api+l)
-	.then((res) => res.json())
-	.then((d) => {
-		// data.push(d);
-		data[l] = [];
-		data[l] = d;
-		console.log(`loaded ${l}:`, data);
+window.onload = () => {
+	load.forEach((l) => {
+		fetch(api+l)
+		.then((res) => res.json())
+		.then((d) => {
+			console.log(d);
+			// data.push(d);
+			data[l] = [];
+			data[l] = d;
+			console.log(`loaded ${l}:`, data);
+		});
 	});
-});
+}
 
 var synth = window.speechSynthesis;
 var voices = synth.getVoices().sort(function (a, b) {

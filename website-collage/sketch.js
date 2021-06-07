@@ -10,13 +10,23 @@
 let sites = [];
 
 window.onload = () => {
-	fetch('http://192.168.1.107:8080/questions_answers/Website')
+	// fetch('http://192.168.1.107:8080/questions_answers/Website')
+	fetch('http://localhost:8080/questions_answers/Website')
 	.then(response => response.json())
 	.then(data => {
 		sites = data;
 		console.log(data);
 		collage();
 	});
+
+	// html2canvas('http://www.timohoogland.com', {
+	// 	onrendered: (canvas) => {
+	// 		var img = canvas.toDataURL();
+	// 		var cnv = document.createElement();
+	// 		document.appendChild()
+	// 		// $("#result-image").attr('src', img).show();
+	// 	}
+	// });
 }
 
 function collage(){	
