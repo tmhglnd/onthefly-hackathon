@@ -53,7 +53,7 @@ function collage(){
 		let sites = [];
 		sites = sites.concat(https)
 				.concat(www)
-				// .concat(other);
+				.concat(other);
 		// console.log('found sites:', sites);
 		// console.log(sites);
 		
